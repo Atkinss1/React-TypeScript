@@ -20,7 +20,7 @@ interface CoursePartGroup extends CoursePartBase {
 
 interface CoursePartBackground extends CoursePartBase {
   description: string;
-  backgroundmaterial: string;
+  backgroundMaterial: string;
   kind: "background"
 }
 
@@ -28,7 +28,7 @@ type CoursePart = CoursePartBasic | CoursePartGroup| CoursePartBackground;
 
 function App() {
   const courseName = "Half Stack application development";
-  const courseParts = [
+  const courseParts: CoursePart[] = [
   {
     name: "Fundamentals",
     exerciseCount: 10,
