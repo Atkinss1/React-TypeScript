@@ -2,29 +2,9 @@ import './App.css'
 import Header from './components/Header';
 import Content from './components/Content';
 import Total from './components/Total';
+import { CoursePart } from './types';
 
-interface CoursePartBase {
-  name: string;
-  exerciseCount: number;
-}
 
-interface CoursePartBasic extends CoursePartBase {
-  description: string;
-  kind: "basic"
-}
-
-interface CoursePartGroup extends CoursePartBase {
-  groupProjectCount: number;
-  kind: "group"
-}
-
-interface CoursePartBackground extends CoursePartBase {
-  description: string;
-  backgroundMaterial: string;
-  kind: "background"
-}
-
-type CoursePart = CoursePartBasic | CoursePartGroup| CoursePartBackground;
 
 function App() {
   const courseName = "Half Stack application development";
@@ -53,6 +33,12 @@ function App() {
     description: "Confusing description",
     backgroundMaterial: "https://type-level-typescript.com/template-literal-types",
     kind: "background"
+  },
+  {
+    name: "TypeScript in frontend",
+    exerciseCount: 10,
+    description: "a hard part",
+    kind: "basic"
   },
 ];
 
